@@ -1,0 +1,14 @@
+h3 Register
+.row
+    .col-xs-6
+      form(novalidate, name='registerForm', role='form')
+        .form-group
+          label(for='email') Email
+          input.form-control#email(required, type='email', name='email', ng-model='user.email', autofocus=true)
+        .form-group
+          label(for='password') Password
+          input.form-control#password(required, ng-minlength='3', type='password', name='password', ng-model='user.password')
+        button.btn.btn-primary(ng-show='registerForm.$valid', ng-click='register()') Register
+    .col-xs-6
+
+
